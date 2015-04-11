@@ -1,12 +1,22 @@
 // This is the file where you will write the Truncate Words function and related code.
-
+function truncateWords(longText , numWords){
+	var longTextArray = longText.split(' ');
+	console.log(longTextArray);
+	var size = longTextArray.length;
+	console.log(size);
+	shortTextArray = longTextArray.splice( 0 , numWords);
+	console.log(numWords);
+	console.log(shortTextArray);
+	shortTextArray.push("...");
+	console.log(shortTextArray);
+	
+}
+truncateWords("A string with several words" , 3);
 // TODO: Create a Function called truncateWords() that accepts two arguments: 
 // longText (a String with several words in it)
 // numWords (an Integer that sets the number of words you want in the returned text)
 
-// TODO: Within the truncateWords() Function, complete the following steps:
-// 1. Use the split() function to split the String into an Array
-// 2. Use the length attribute to find the number of words in the Array
+
 // 3. Determine how many words should be removed from the String
 // 4. Remove those words from the Array
 // 5. Add an additional String item to the Array to put an ellipses in: "..."
